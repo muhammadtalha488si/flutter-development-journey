@@ -1,4 +1,4 @@
-
+/*
    void main(){
 
   //for string
@@ -8,8 +8,7 @@
   int age=21;
 
   print('name:$name    city:$city     age:$age');
-   }
-
+   }*/
   // boolyan its mean true or false
 
   /*
