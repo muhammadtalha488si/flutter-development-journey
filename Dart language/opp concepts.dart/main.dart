@@ -16,3 +16,13 @@ print(person.getCountry);
 }
 
        */
+
+import 'student.dart';
+
+void main(){
+  Student student=Student();
+  student.name="talha";
+
+  print(student.name);
+}
+      

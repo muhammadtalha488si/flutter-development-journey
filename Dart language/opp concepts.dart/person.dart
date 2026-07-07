@@ -5,7 +5,6 @@ class Person {
  late String _name;
  late int _age;
  late String _country;
-
   set setName(String name) => _name=name;
   set setAge(int age )=>_age=age;
    set setCountry(String country)=>_country=country;
@@ -16,3 +15,8 @@ class Person {
 }
        */
 
+class Person {
+  String? name;
+  int? age;
+
+}
