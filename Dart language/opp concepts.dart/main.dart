@@ -20,9 +20,13 @@ print(person.getCountry);
 import 'student.dart';
 
 void main(){
-  Student student=Student();
-  student.name="talha";
+  Student student=Student("talha",12,'25MDSWE488',545o);
 
   print(student.name);
+  print(student.age);
+  print(student.roll);
+  print(student.marks);
 }
+
+
       
