@@ -1,4 +1,5 @@
-
+//inheritance concept
+/*
 import 'person.dart';
 
 class Student extends Person{
@@ -8,4 +9,6 @@ class Student extends Person{
 
   Student(String name,int age,this.roll,this.marks):super(name,age);
 
-}
+}            */
+
+

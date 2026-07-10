@@ -14,11 +14,12 @@ class Person {
  String get getCountry=>_country;
 }
        */
-
+//inheritance concept
+/*
 class Person {
   String? name;
   int? age;
 
   Person(this.name,this.age);
 
-}
+}            */

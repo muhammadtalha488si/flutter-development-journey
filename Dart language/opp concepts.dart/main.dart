@@ -17,10 +17,12 @@ print(person.getCountry);
 
        */
 
+//inheritance concept
+/*
 import 'student.dart';
 
 void main(){
-  Student student=Student("talha",12,'25MDSWE488',545o);
+  Student student=Student("talha",12,'25MDSWE488',545);
 
   print(student.name);
   print(student.age);
@@ -28,5 +30,4 @@ void main(){
   print(student.marks);
 }
 
-
-      
+          */
