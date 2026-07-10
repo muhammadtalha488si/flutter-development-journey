@@ -18,7 +18,7 @@ print(person.getCountry);
        */
 
 //inheritance concept
-/*
+
 import 'student.dart';
 
 void main(){
@@ -30,4 +30,4 @@ void main(){
   print(student.marks);
 }
 
-          */
+          
