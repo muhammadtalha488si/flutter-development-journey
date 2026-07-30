@@ -11,10 +11,10 @@
 
 // constant value concept____________________
 
-void main(){
-print(Gender.Male.name);
-}
+// void main(){
+// print(Gender.Male.name);
+// }
 
-enum Gender{Male,Female,other}
+// enum Gender{Male,Female,other}
 
-enum Days{moday,tuesday,wensday}
+// enum Days{moday,tuesday,wensday}
