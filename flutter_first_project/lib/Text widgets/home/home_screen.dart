@@ -17,18 +17,28 @@ class HomeScreen extends StatelessWidget {
         backgroundColor:Colors.blueGrey,
       ),
       body: Text(
-        'I AM SOFTWARE ENGINEERING STUDENT AT UET MARDAN',
-        maxLines: 1,
+        'I AM A SOFTWARE ENGINEERING STUDENT AT UET MARDAN',
+        textAlign: TextAlign.center,
+        maxLines: 4,
         style: TextStyle(
-          fontSize: 20,
+          fontSize: 50,
           color:Color.fromARGB(255, 183, 4, 232),
           fontStyle:FontStyle.italic,
-          letterSpacing: 2.5,
+          letterSpacing: 1.5,
           height: 2.5,
           overflow: TextOverflow.ellipsis,
          decoration: TextDecoration.underline,
          decorationColor: Colors.amber,
-         decorationThickness: 4,
+         decorationThickness: 2,
+         wordSpacing: 2,
+         shadows: [
+          Shadow(
+          color: Colors.black,
+          blurRadius: 5,
+          offset: Offset(-5, 8)
+          )
+         ],
+         backgroundColor: Colors.grey,
          fontFamily: 'MyFont'
         ),
         ),

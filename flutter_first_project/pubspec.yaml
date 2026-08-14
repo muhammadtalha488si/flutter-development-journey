@@ -76,7 +76,7 @@ flutter:
   fonts:
    - family: MyFont
      fonts:
-      - asset: assets/fonts/font1.ttf
+       - asset: assets/fonts/font1.ttf
  
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
