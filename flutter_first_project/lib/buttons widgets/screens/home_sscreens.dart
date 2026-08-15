@@ -7,7 +7,7 @@ class HomeSscreens extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.tealAccent,
+        backgroundColor: const Color.fromARGB(255, 98, 133, 125),
       ),
     );
   }
