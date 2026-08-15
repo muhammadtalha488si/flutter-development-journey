@@ -6,7 +6,7 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_first_project/STL%20&%20STF%20Widgets/main%20file/main.dart';
+import 'package:flutter_first_project/image%20widgets/main%20file/main.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

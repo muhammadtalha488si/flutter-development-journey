@@ -1,8 +1,8 @@
 // import 'package:flutter/material.dart';
-// import 'package:flutter_first_project/Text%20widgets/home/home_screen.dart';
+// import 'package:flutter_first_project/image%20widgets/screens/home_screens.dart';
 
 // void main(){
-//     runApp(MyApp());
+// runApp(MyApp());
 // }
 
 // class MyApp extends StatelessWidget {
@@ -11,7 +11,7 @@
 //   @override
 //   Widget build(BuildContext context) {
 //     return MaterialApp(
-//         home:HomeScreen(),
+//       home: HomeScreens()
 //     );
 //   }
 // }
