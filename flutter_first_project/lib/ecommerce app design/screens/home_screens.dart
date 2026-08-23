@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_first_project/ecommerce%20app%20design/screens/item_category.dart';
+import 'package:flutter_first_project/ecommerce%20app%20design/screens/item_products.dart';
 import 'package:flutter_first_project/ecommerce%20app%20design/screens/items_baners.dart';
 
 class HomeScreens extends StatefulWidget {
@@ -11,7 +12,7 @@ class HomeScreens extends StatefulWidget {
 }
 
 class _HomeScreensState extends State<HomeScreens> {
-  List <String> banners=[ 'image.jpg','image1.jpg','image2.jpg'];
+  List <String> banners=[ 'image.jpg','image.jpg','image.jpg'];
   int currentIndex =0;
   
   @override
@@ -56,8 +57,9 @@ class _HomeScreensState extends State<HomeScreens> {
             });
           },
           children: [
-            for(String banner in banners)
+            for(String images in banners)
             ItemsBaners(image: 'image.jpg'),
+
           ],
         ),
       ),
@@ -89,21 +91,42 @@ class _HomeScreensState extends State<HomeScreens> {
        title:Text('Categories',style: TextStyle(fontSize: 20),),
        trailing: Text('Show All',style: TextStyle(color: Colors.indigo,fontSize: 15),),
       ),
-  
       SizedBox(
         height: 100,
         child: ListView(
           scrollDirection: Axis.horizontal,
           children: [
-            ItemCategory(title:'Linkedin', image: 'Linkedin.png', color: Colors.orangeAccent),
-             ItemCategory(title:'Instagram', image: 'instagram.png', color: Colors.indigoAccent),
-              ItemCategory(title:'Telegram', image: 'telegram.png', color: Colors.green),
-               ItemCategory(title:'Tik-Tok', image: 'tik-tok.png', color: Colors.blueAccent),
-                ItemCategory(title:'Add-Box', image: 'icon1.png', color: Colors.redAccent),
+           
+            ItemCategory(title:'Linkedin', image: 'linkedin.png', color: Colors.orangeAccent),           ItemCategory(title:'Instagram', image: 'instagram.png', color: Colors.indigoAccent),
+            ItemCategory(title:'Telegram', image: 'telegram.png', color: Colors.green),
+            ItemCategory(title:'Tik-Tok', image: 'tik-tok.png', color: Colors.blueAccent),
+            ItemCategory(title:'Add-Box', image: 'icon1.png', color: Colors.redAccent),
+            ItemCategory(title:'Linkedin', image: 'linkedin.png', color: Colors.orangeAccent),
+            ItemCategory(title:'Instagram', image: 'instagram.png', color: Colors.indigoAccent),
+            ItemCategory(title:'Telegram', image: 'telegram.png', color: Colors.green),
+            ItemCategory(title:'Tik-Tok', image: 'tik-tok.png', color: Colors.blueAccent),
+            ItemCategory(title:'Add-Box', image: 'icon1.png', color: Colors.redAccent),
           ],
         ),
-      )
-
+      ),
+       
+      //  products
+       ListTile(
+       title:Text('Products',style: TextStyle(fontSize: 20),),
+       trailing: Text('Show All',style: TextStyle(color: Colors.indigo,fontSize: 15),),
+      ),
+       GridView.count(
+       crossAxisCount: 2,
+       shrinkWrap: true,
+       physics: NeverScrollableScrollPhysics(),
+       children: [
+      ItemProducts(
+        image:'assets/images/image3.jpg',
+         logo:'Pantrist',
+          title: 'This is a social media platform',
+          )
+       ],
+       ),
       ],
     ),
     );

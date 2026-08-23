@@ -18,7 +18,7 @@ class ItemCategory extends StatelessWidget {
                       color: color,
                       shape: BoxShape.circle
                     ),
-                    child: Image.asset('assets/icons/image',color: Colors.white,height: 50,),
+                    child: Image.asset('assets/icons/$image',color: Colors.white,height: 50,),
                   ),
                   Text(title)
                 ],

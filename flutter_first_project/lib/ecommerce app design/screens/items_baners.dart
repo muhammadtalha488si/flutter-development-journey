@@ -14,6 +14,7 @@ class ItemsBaners extends StatelessWidget {
             image: DecorationImage(
               fit: BoxFit.cover,
               image: AssetImage('assets/images/image.jpg'),
+
             )
             ),
           );
