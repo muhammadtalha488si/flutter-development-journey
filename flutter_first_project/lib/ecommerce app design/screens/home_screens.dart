@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_first_project/ecommerce%20app%20design/screens/item_category.dart';
 import 'package:flutter_first_project/ecommerce%20app%20design/screens/items_baners.dart';
 
 class HomeScreens extends StatefulWidget {
@@ -60,7 +61,6 @@ class _HomeScreensState extends State<HomeScreens> {
           ],
         ),
       ),
-     
       SizedBox(
           height: 40,
         child: Row(
@@ -79,7 +79,6 @@ class _HomeScreensState extends State<HomeScreens> {
               color: currentIndex == index?Colors.grey:Colors.grey.shade400
             ),
           ),
-          
           ],
         ),
       ),
@@ -96,14 +95,11 @@ class _HomeScreensState extends State<HomeScreens> {
         child: ListView(
           scrollDirection: Axis.horizontal,
           children: [
-            Container(
-             height: 50,
-              decoration: BoxDecoration(
-                color: Colors.amberAccent,
-                shape: BoxShape.circle
-              ),
-              
-            ),
+            ItemCategory(title:'Linkedin', image: 'Linkedin.png', color: Colors.orangeAccent),
+             ItemCategory(title:'Instagram', image: 'instagram.png', color: Colors.indigoAccent),
+              ItemCategory(title:'Telegram', image: 'telegram.png', color: Colors.green),
+               ItemCategory(title:'Tik-Tok', image: 'tik-tok.png', color: Colors.blueAccent),
+                ItemCategory(title:'Add-Box', image: 'icon1.png', color: Colors.redAccent),
           ],
         ),
       )
