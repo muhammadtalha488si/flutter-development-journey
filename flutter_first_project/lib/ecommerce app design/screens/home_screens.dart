@@ -117,14 +117,59 @@ class _HomeScreensState extends State<HomeScreens> {
       ),
        GridView.count(
        crossAxisCount: 2,
+       padding: EdgeInsets.symmetric(horizontal: 15),
+       mainAxisSpacing: 10,
+       crossAxisSpacing: 10,
        shrinkWrap: true,
        physics: NeverScrollableScrollPhysics(),
        children: [
       ItemProducts(
-        image:'assets/images/image3.jpg',
+        image:'image3.jpg',
          logo:'Pantrist',
           title: 'This is a social media platform',
-          )
+          ),
+
+           ItemProducts(
+        image:'image4.jpg',
+         logo:'Tik_Tok',
+          title: 'This is a social media platform',
+          ),
+
+           ItemProducts(
+        image:'image5.jpg',
+         logo:'Snapchat',
+          title: 'This is a social media platform',
+          ),
+
+           ItemProducts(
+        image:'image6.jpg',
+         logo:'Telegram',
+          title: 'This is a social media platform',
+          ),
+
+           ItemProducts(
+        image:'image8.jpg',
+         logo:'Youtub',
+          title: 'This is a social media platform',
+          ),
+
+           ItemProducts(
+        image:'image9.jpg',
+         logo:'Logos',
+          title: 'This is a social media logos',
+          ),
+
+           ItemProducts(
+        image:'image2.jpg',
+         logo:'logos',
+          title: 'This is a social media logos',
+          ),
+
+           ItemProducts(
+        image:'image7.jpg',
+         logo:'Social media logo',
+          title: 'This is a social media platform',
+          ),
        ],
        ),
       ],
