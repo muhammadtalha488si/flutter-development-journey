@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_first_project/ecommerce%20app%20design/screens/items_baners.dart';
 
 class HomeScreens extends StatefulWidget {
   const HomeScreens({super.key});
@@ -9,6 +10,9 @@ class HomeScreens extends StatefulWidget {
 }
 
 class _HomeScreensState extends State<HomeScreens> {
+  List <String> banners=[ 'image.jpg','image1.jpg','image2.jpg'];
+  int currentIndex =0;
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,24 +45,69 @@ class _HomeScreensState extends State<HomeScreens> {
             ),
           ),
          ),
-        
-      PageView(
-        children: [
-            Container(
-          height: 180,
-          margin:EdgeInsets.symmetric(horizontal: 15) ,
-          decoration:BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-          image: DecorationImage(
-            fit: BoxFit.cover,
-            image: AssetImage('assets/images/image.jpg'),
-          )
-          ),
+        // banners
+      SizedBox(
+        height: 150,
+        child: PageView(
+          onPageChanged: (value){
+            setState(() {
+              currentIndex=value;
+            });
+          },
+          children: [
+            for(String banner in banners)
+            ItemsBaners(image: 'image.jpg'),
+          ],
         ),
-
+      ),
      
-        ],
+      SizedBox(
+          height: 40,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          spacing: 10,
+          children: [
+            for(int index=0;index < banners.length;index++)
+
+
+            AnimatedContainer(
+              duration: Duration(milliseconds: 300),
+            height:currentIndex == index? 15:8,
+            width: currentIndex == index? 15:8,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: currentIndex == index?Colors.grey:Colors.grey.shade400
+            ),
+          ),
+          
+          ],
+        ),
+      ),
+         
+
+      //  categories
+      ListTile(
+       title:Text('Categories',style: TextStyle(fontSize: 20),),
+       trailing: Text('Show All',style: TextStyle(color: Colors.indigo,fontSize: 15),),
+      ),
+  
+      SizedBox(
+        height: 100,
+        child: ListView(
+          scrollDirection: Axis.horizontal,
+          children: [
+            Container(
+             height: 50,
+              decoration: BoxDecoration(
+                color: Colors.amberAccent,
+                shape: BoxShape.circle
+              ),
+              
+            ),
+          ],
+        ),
       )
+
       ],
     ),
     );
