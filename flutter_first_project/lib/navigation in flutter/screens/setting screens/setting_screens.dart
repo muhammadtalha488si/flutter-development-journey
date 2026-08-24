@@ -7,10 +7,17 @@ class SettingScreens extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepOrangeAccent,
-        title: Text('Settings'),
+        backgroundColor: Colors.deepOrange,
+        title: Text('Setting'),
       ),
-    )
-    ;
+      body: Center(
+        child: ElevatedButton(
+          onPressed: (){  
+            Navigator.pop(context);
+          },
+         child:Text('Go Back')
+        ),
+      )
+    );
   }
 }

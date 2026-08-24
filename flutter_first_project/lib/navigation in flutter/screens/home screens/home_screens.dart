@@ -19,8 +19,8 @@ class HomeScreens extends StatelessWidget {
            ElevatedButton(
               onPressed: (){
                 Navigator.push(context,MaterialPageRoute(
-                  builder:(context) {
-                    return ProfileScreens();
+                  builder:(context) { 
+                    return ProfileScreens(name:'durrani' ,);
                   },
                 ));
               },
