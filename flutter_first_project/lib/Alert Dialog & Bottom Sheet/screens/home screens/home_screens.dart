@@ -22,6 +22,7 @@ class HomeScreens extends StatelessWidget {
             builder:(context){
               return AlertDialog(
                 title: Text('Logout'),
+                icon: Icon(Icons.logout),
                 content: Text('Are you sure you want logout ?'),
                 actions: [
                   ElevatedButton(
@@ -34,7 +35,7 @@ class HomeScreens extends StatelessWidget {
                     onPressed:(){
                    Navigator.pop(context);
                     } ,
-                  child:Text('yes')),
+                  child:Text('yes ')),
                 ],
               );
             }
