@@ -23,7 +23,11 @@ class HomeScreens extends StatelessWidget {
               return AlertDialog(
                 title: Text('Logout'),
                 icon: Icon(Icons.logout),
-                content: Text('Are you sure you want logout ?'),
+                content: Column(
+                  children: [
+                    Text('Are you sure you want logout ?'),
+                  ],
+                ),
                 actions: [
                   ElevatedButton(
                     onPressed:(){
