@@ -17,7 +17,28 @@ class HomeScreens extends StatelessWidget {
         
           ElevatedButton(
           onPressed: () {
-            
+           showDialog(
+            context: context,
+            builder:(context){
+              return AlertDialog(
+                title: Text('Logout'),
+                content: Text('Are you sure you want logout ?'),
+                actions: [
+                  ElevatedButton(
+                    onPressed:(){
+                   Navigator.pop(context);
+                    } ,
+                  child:Text('No')),
+
+                  ElevatedButton(
+                    onPressed:(){
+                   Navigator.pop(context);
+                    } ,
+                  child:Text('yes')),
+                ],
+              );
+            }
+            );
           },
           child: Text('show Dialog'),
           ),
