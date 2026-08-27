@@ -14,7 +14,6 @@ class HomeScreens extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           spacing: 15,
           children: [
-        
           ElevatedButton(
           onPressed: () {
            showDialog(
@@ -23,35 +22,44 @@ class HomeScreens extends StatelessWidget {
               return AlertDialog(
                 title: Text('Logout'),
                 icon: Icon(Icons.logout),
-                content: Column(
-                  children: [
-                    Text('Are you sure you want logout ?'),
-                  ],
-                ),
+                content: Text('Are you sure you want logout ?'),
+
                 actions: [
                   ElevatedButton(
                     onPressed:(){
                    Navigator.pop(context);
                     } ,
-                  child:Text('No')),
-
+                  child:Text('No')
+                  ),
                   ElevatedButton(
                     onPressed:(){
                    Navigator.pop(context);
                     } ,
-                  child:Text('yes ')),
+                  child:Text('yes ')
+                  ),
                 ],
               );
             }
             );
           },
           child: Text('show Dialog'),
-          ),
-         
-            
+          ),  
+           
           ElevatedButton(
           onPressed: () {
-            
+            showModalBottomSheet(
+            context: context ,
+            showDragHandle: true,
+            builder: (context){
+              return ListView(
+              children: [
+              ListTile(
+             title: Text('this is title'),
+              ),
+                ],
+              );
+            },
+            );
           },
           child: Text('show Bottom Sheet'),
           ),
