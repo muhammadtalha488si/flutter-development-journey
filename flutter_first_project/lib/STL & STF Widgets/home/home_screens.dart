@@ -1,33 +1,33 @@
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-// class HomeScreens extends StatefulWidget {
-//   const HomeScreens({super.key});
+class HomeScreens extends StatefulWidget {
+  const HomeScreens({super.key});
 
-//   @override
-//   State<HomeScreens> createState() => _HomeScreensState();
-// }
+  @override
+  State<HomeScreens> createState() => _HomeScreensState();
+}
 
-// class _HomeScreensState extends State<HomeScreens> {
-//   String title='home';
+class _HomeScreensState extends State<HomeScreens> {
+  String title='home';
 
-//   void changetitle(){
-//  setState(() {
-//    title='update title';
-//  });
-//   }
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text(title),
-//         backgroundColor: const Color.fromARGB(255, 120, 90, 2),
-//       ),
-//     body: ElevatedButton(
-//       onPressed: (){
-//         changetitle();
-//       },
-//       child: Text("Button Title"),
-//       ),
-//     );
-//   }
-// }
+  void changetitle(){
+ setState(() {
+   title='update title';
+ });
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+        backgroundColor: const Color.fromARGB(255, 120, 90, 2),
+      ),
+    body: ElevatedButton(
+      onPressed: (){
+        changetitle();
+      },
+      child: Text("Button Title"),
+      ),
+    );
+  }
+}
