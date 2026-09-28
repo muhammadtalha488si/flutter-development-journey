@@ -97,7 +97,7 @@ class _HomeScreensState extends State<HomeScreens> {
           scrollDirection: Axis.horizontal,
           children: [
            
-            ItemCategory(title:'Linkedin', image: 'linkedin.png', color: Colors.orangeAccent),           ItemCategory(title:'Instagram', image: 'instagram.png', color: Colors.indigoAccent),
+            ItemCategory(title:'Linkedin', image: 'linkedin.png', color: const Color.fromARGB(255, 64, 255, 67)),           ItemCategory(title:'Instagram', image: 'instagram.png', color: Colors.indigoAccent),
             ItemCategory(title:'Telegram', image: 'telegram.png', color: Colors.green),
             ItemCategory(title:'Tik-Tok', image: 'tik-tok.png', color: Colors.blueAccent),
             ItemCategory(title:'Add-Box', image: 'icon1.png', color: Colors.redAccent),
