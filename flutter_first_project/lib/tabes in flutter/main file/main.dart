@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_first_project/popup%20Menu%20&%20Dropdown/screens/home_screen.dart';
+import 'package:flutter_first_project/Tabes%20in%20flutter/screens/screens.dart';
+
 
 void main(){
   runApp(MyApp());
@@ -15,9 +16,8 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-  
     return MaterialApp(
-      home: HomeScreen(),
+      home:Screens(),
     );
   }
 }
