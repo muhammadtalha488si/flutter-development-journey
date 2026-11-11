@@ -66,7 +66,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               radius: 60,
               backgroundColor: Colors.blue,
               backgroundImage: const AssetImage(
-                'assets/images/profile.jpg',
+                'assets/images/image1.JPG',
               ),
             ),
 
@@ -190,7 +190,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     leading: Icon(Icons.school),
                     title: Text('Education'),
                     subtitle: Text(
-                      'Computer Science Student',
+                      'Computer Software Engineering Student',
                     ),
                   ),
                 ],
@@ -209,38 +209,63 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 children: [
 
                   // GITHUB
-                  IconButton(
-                    iconSize: 35,
-                    icon: const Icon(Icons.code),
-                    color: Colors.black,
+                  Column(
+  children: [
+    CircleAvatar(
+      radius: 30,
+      backgroundColor: const Color.fromARGB(255, 247, 246, 246),
+      child: ClipOval(
+        child: Image.asset(
+          'assets/icons/telegram.png',
+          width: 60,
+          height: 60,
+          fit: BoxFit.cover,
+        ),
+      ),
+    ),
 
-                    onPressed: () {
-                      ScaffoldMessenger.of(context)
-                          .showSnackBar(
-                        const SnackBar(
-                          content: Text('GitHub selected'),
-                        ),
-                      );
-                    },
-                  ),
+    const SizedBox(height: 10),
 
+    const Text(
+      'Telegram',
+      style: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+        color: Colors.black,
+      ),
+    ),
+  ],
+),
                   const SizedBox(width: 25),
 
                   // LINKEDIN
-                  IconButton(
-                    iconSize: 35,
-                    icon: const Icon(Icons.work_outline),
-                    color: Colors.blue,
+                 Column(
+  children: [
+    CircleAvatar(
+      radius: 30,
+      backgroundColor: const Color.fromARGB(255, 243, 244, 245),
+      child: ClipOval(
+        child: Image.asset(
+          'assets/icons/linkedin.png',
+          width: 70,
+          height: 60,
+          fit: BoxFit.cover,
+        ),
+      ),
+    ),
 
-                    onPressed: () {
-                      ScaffoldMessenger.of(context)
-                          .showSnackBar(
-                        const SnackBar(
-                          content: Text('LinkedIn selected'),
-                        ),
-                      );
-                    },
-                  ),
+    const SizedBox(height: 10),
+
+    const Text(
+      'LinkedIn',
+      style: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+        color: Colors.black,
+      ),
+    ),
+  ],
+),
                 ],
               ),
             ),
