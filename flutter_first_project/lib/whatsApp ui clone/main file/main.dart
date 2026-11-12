@@ -14,16 +14,23 @@ class WhatsAppClone extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'WhatsApp Clone',
-
+      title: 'WhatsApp Modern UI',
       theme: ThemeData(
         useMaterial3: true,
-        scaffoldBackgroundColor: Colors.white,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF075E54),
+          seedColor: const Color(0xFF008F76),
+          brightness: Brightness.light,
+        ),
+        scaffoldBackgroundColor: const Color(0xFFF7F8FA),
+      ),
+      darkTheme: ThemeData(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF008F76),
+          brightness: Brightness.dark,
         ),
       ),
-
+      themeMode: ThemeMode.system,
       home: const SplashScreen(),
     );
   }

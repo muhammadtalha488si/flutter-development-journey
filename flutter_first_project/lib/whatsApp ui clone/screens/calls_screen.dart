@@ -4,49 +4,79 @@ import 'package:flutter/material.dart';
 class CallsScreen extends StatelessWidget {
   const CallsScreen({super.key});
 
+  final List<Map<String, dynamic>> calls = const [
+    {
+      'name': 'Ahmed Khan',
+      'time': 'Today, 10:30 AM',
+      'icon': Icons.call_received,
+      'color': Colors.green,
+    },
+    {
+      'name': 'Ali Raza',
+      'time': 'Today, 09:15 AM',
+      'icon': Icons.call_made,
+      'color': Colors.green,
+    },
+    {
+      'name': 'Usman',
+      'time': 'Yesterday, 08:20 PM',
+      'icon': Icons.call_missed,
+      'color': Colors.red,
+    },
+    {
+      'name': 'Hamza',
+      'time': 'Yesterday, 05:40 PM',
+      'icon': Icons.videocam,
+      'color': Colors.green,
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return ListView(
-      children: const [
-
-        ListTile(
-          leading: CircleAvatar(
-            backgroundColor: Color(0xFF075E54),
-            child: Icon(Icons.person, color: Colors.white),
-          ),
-          title: Text('Ahmed'),
-          subtitle: Text('Incoming call · Today, 10:30 AM'),
-          trailing: Icon(
-            Icons.call,
-            color: Color(0xFF075E54),
+      children: [
+        const Padding(
+          padding: EdgeInsets.all(16),
+          child: Text(
+            'Recent calls',
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
 
-        ListTile(
-          leading: CircleAvatar(
-            backgroundColor: Colors.blue,
-            child: Icon(Icons.person, color: Colors.white),
-          ),
-          title: Text('Ali'),
-          subtitle: Text('Outgoing call · Yesterday'),
-          trailing: Icon(
-            Icons.call_made,
-            color: Color(0xFF075E54),
-          ),
-        ),
-
-        ListTile(
-          leading: CircleAvatar(
-            backgroundColor: Colors.orange,
-            child: Icon(Icons.person, color: Colors.white),
-          ),
-          title: Text('Usman'),
-          subtitle: Text('Missed call · Yesterday'),
-          trailing: Icon(
-            Icons.call_missed,
-            color: Colors.red,
-          ),
-        ),
+        ...calls.map((call) {
+          return ListTile(
+            leading: const CircleAvatar(
+              radius: 26,
+              backgroundColor: Color(0xFF008F76),
+              child: Icon(Icons.person, color: Colors.white),
+            ),
+            title: Text(
+              call['name'],
+              style: const TextStyle(fontWeight: FontWeight.bold),
+            ),
+            subtitle: Row(
+              children: [
+                Icon(
+                  call['icon'],
+                  size: 16,
+                  color: call['color'],
+                ),
+                const SizedBox(width: 6),
+                Text(call['time']),
+              ],
+            ),
+            trailing: IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.call,
+                color: Color(0xFF008F76),
+              ),
+            ),
+          );
+        }),
       ],
     );
   }
