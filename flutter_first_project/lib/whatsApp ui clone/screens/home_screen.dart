@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_first_project/a%20mini%20project%20using%20ui%20concepts/settings_screen.dart';
 import 'chats_screen.dart';
 import 'status_screen.dart';
 import 'contacts_screen.dart';
@@ -21,6 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
     StatusScreen(),
     ContactsScreen(),
     CallsScreen(),
+    SettingsScreen(),
   ];
 
   final titles = [
@@ -43,6 +45,24 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
         actions: [
+          PopupMenuButton<String>(
+  onSelected: (value) {
+    if (value == 'settings') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (_) => const SettingsScreen(),
+        ),
+      );
+    }
+  },
+  itemBuilder: (context) => const [
+    PopupMenuItem(
+      value: 'settings',
+      child: Text('Settings'),
+    ),
+  ],
+),
           IconButton(
             onPressed: () {},
             icon: const Icon(Icons.search),
