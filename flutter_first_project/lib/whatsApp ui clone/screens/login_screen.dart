@@ -60,7 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
             const Icon(
               Icons.chat,
-              color: Color(0xFF075E54),
+              color: Color.fromARGB(255, 1, 126, 42),
               size: 80,
             ),
 
