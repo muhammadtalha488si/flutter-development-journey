@@ -23,6 +23,8 @@ class _HomeScreenState extends State<HomeScreen> {
     StatusScreen(),
     ContactsScreen(),
     CallsScreen(),
+
+
   ];
 
   static const List<String> titles = [
@@ -79,16 +81,16 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ],
           ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.search),
-            tooltip: 'Search',
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.camera_alt_outlined),
-            tooltip: 'Camera',
-          ),
+          // IconButton(
+          //   onPressed: () {},
+          //   icon: const Icon(Icons.search),
+          //   tooltip: 'Search',
+          // ),
+          // IconButton(
+          //   onPressed: () {},
+          //   icon: const Icon(Icons.camera_alt_outlined),
+          //   tooltip: 'Camera',
+          // ),
           Padding(
             padding: const EdgeInsets.only(right: 12),
             child: GestureDetector(
